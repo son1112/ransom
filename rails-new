@@ -1,0 +1,130 @@
+#!/bin/bash
+
+APPname=$1
+ROOTPATH="$(pwd)"
+RAILS=$HOME/RAILS-dev
+TEMP=$RAILS/template.rb
+APP=$ROOTPATH/$APPname
+ASS=$APP/app/assets
+STYLES=$ASS/stylesheets
+
+#rails new $APP -m $TEMP
+rails new $APP
+
+cd $APP
+ln -s $HOME/bin/rails-new.sh rails-new.sh
+cp rails-new.sh rails-new
+
+rm README.*
+echo $APPname "application" > README.org
+echo '' >> README.org
+echo '*Documentation forthcoming*' >> README.org
+
+cd $ASS/stylesheets
+mv application.css application.css.scss
+
+cd $APP
+
+echo ''
+echo 'Would you like to test the skeletal application?'
+echo ''
+
+read answer
+
+if [ $answer = 'yes' ]
+then
+    rails s
+fi
+
+cat $RAILS/DEFAULT-Gemfile > Gemfile
+echo ''
+echo 'Would you like to update the Gemfile?'
+echo ''
+
+read answer
+echo ''
+
+if [ $answer = 'yes' ]
+then
+    nano Gemfile
+fi
+
+bundle update
+bundle install --without production
+
+rake db:migrate
+
+echo ''
+echo 'Would you like to test the skeletal application?'
+echo ''
+
+read answer
+
+if [ $answer = 'yes' ]
+then
+    rails s
+fi
+
+
+echo ''
+echo 'Would you like to set up git?'
+echo ''
+
+read answer
+
+if [ $answer = 'yes' ]
+then
+    git init
+    echo ".env" >> .gitignore
+    echo "Procfile" >> .gitignore
+    echo "/config/initializers/secret_token.rb" >> .gitignore
+    git add .
+    git commit -am "initial commit"
+
+    echo ''
+    echo 'Please enter the repository address:'
+    echo ''
+
+    read repo
+
+    git remote add origin $repo
+    git push -u origin master
+fi
+
+
+echo ''
+echo 'Would you like to set up heroku?'
+echo ''
+
+read answer
+
+if [ $answer = 'yes' ]
+then
+
+    heroku create
+    # need a filter here for the case of failure
+
+    git push heroku master
+
+    echo ''
+    echo 'Would you like to rename your heroku app?'
+    echo ''
+
+    read answer
+
+    if [ $answer = 'yes' ]
+    then
+	echo ''
+	echo 'Please enter the new name for your heroku app:'
+	echo ''
+	
+	read name
+	
+	heroku rename $name
+    fi
+fi
+
+echo "@import 'bootstrap';" > $STYLES/bootstrap_and_customization.css.scss
+rails g controller StaticPages home
+
+

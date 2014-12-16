@@ -1,0 +1,1 @@
+/home/son/bin/rails-new.sh
