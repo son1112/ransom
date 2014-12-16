@@ -11,6 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141216150814) do
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "author"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "video_file_name"
+    t.string   "video_content_type"
+    t.integer  "video_file_size"
+    t.datetime "video_updated_at"
+  end
+
+  create_table "videos", force: true do |t|
+    t.string   "name"
+    t.string   "encoding_file_name"
+    t.string   "encoding_content_type"
+    t.integer  "encoding_file_size"
+    t.datetime "encoding_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

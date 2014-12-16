@@ -34,6 +34,10 @@ GEM
     bootstrap-sass (3.3.1.0)
       sass (~> 3.2)
     builder (3.2.2)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.4)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -70,6 +74,11 @@ GEM
     mime-types (1.25.1)
     minitest (5.5.0)
     multi_json (1.10.1)
+    paperclip (4.2.0)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -107,9 +116,6 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    simple_form (3.1.0)
-      actionpack (~> 4.0)
-      activemodel (~> 4.0)
     skrollr-rails (0.6.26)
       rails (>= 3.1.0)
     spring (1.2.0)
@@ -151,12 +157,12 @@ DEPENDENCIES
   jquery-turbolinks
   mail_form
   metamagic
+  paperclip (~> 4.2)
   pg
   rails (= 4.1.0)
   rails_12factor
   sass-rails (= 4.0.3)
   sdoc (~> 0.4.0)
-  simple_form
   skrollr-rails
   spring
   sqlite3

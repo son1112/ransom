@@ -14,10 +14,11 @@ gem 'bcrypt'
 gem 'pg'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'mail_form'
-gem 'simple_form'
+#gem 'simple_form'
 gem 'skrollr-rails'
 gem 'autoprefixer-rails'
 gem 'metamagic'
+gem 'paperclip', '~> 4.2'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
