@@ -9,7 +9,7 @@
 
 body {
     background-color: rgba(0,0,0,0.2);
-    background: image-url('whitewall.png');
+//    background: image-url('whitewall.png');
     background-size: cover;
 }
 
@@ -36,4 +36,14 @@ body {
 
 .site-main {
     background: rgba(1, 11, 111, 0.1);
+}
+
+#bg-img {
+    background-color: rgba(0,0,0,0.2);
+    background: image-url('whitewall.png');
+    background-size: cover;
+    width: 2000px;
+    height: 2000px;
+    position: absolute;
+    top:0; left:0;
 }

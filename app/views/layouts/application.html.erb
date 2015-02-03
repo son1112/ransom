@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ransom</title>
+    <title>Convo</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
@@ -11,10 +11,15 @@
 
     <div id='skrollr-body'>
       <div class='container-fluid'>
+	<div id='bg-img'
+	     data-0='height:1000px;'
+	     data-3000='height:5000px;'
+	     ></div>
 	<div class='col-md-12'>
 	  <div class='row'>
 	    <div class='col-md-3'></div>
 	    <div class='col-md-6 top-space site-main'>
+	      <%= render 'layouts/header' %>
 	      <%= yield %>
 	    </div>
 	    <div class='col-md-3'></div>
