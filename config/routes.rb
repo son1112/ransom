@@ -2,7 +2,7 @@ Ransom::Application.routes.draw do
   
   resources :posts
 
-  root 'static_pages#home'
+  root 'posts#index'
 
   get 'static_pages/home'
 
