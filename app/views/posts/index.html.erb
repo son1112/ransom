@@ -3,7 +3,9 @@
   <li>
     <% @posts.reverse.each do |post| %>
       <ul>
+
 	<li><%= video_tag(post.video.url, class: 'video', controls: true, preload: "auto") %></li>
+
         <li class='title'><%= post.title %></li>
         <li class='author'><%= post.author %></li>
         <li class='desc'><%= post.description %></li>

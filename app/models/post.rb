@@ -22,6 +22,10 @@ class Post < ActiveRecord::Base
     update_attribute(:video_file_name, "#{id}.ogv")
   end
 
+  validates_attachment_presence :video
+  
+  #validates_attachment :video, content_type: { content_type: ["video/webm", "video/ogv", "video/avi", "video/wmv", "video/ogg", "video/mpeg", "video/mp4"] }
+  validates_attachment_content_type :video, content_type: { content_type: ["video/webm", "video/ogv", "video/avi", "video/wmv", "video/ogg", "video/mpeg", "video/mp4"] }
 
   
   #do_not_validate_attachment_file_type :video
