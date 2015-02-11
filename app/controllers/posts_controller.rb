@@ -26,10 +26,9 @@ class PostsController < ApplicationController
 
     if @post.save
       redirect_to @post, notice: 'Post was successfully created.'
-      #render :show, status: :created, location: @post 
+      render :show, status: :created, location: @post 
     else
       render :new 
-      render json: @post.errors, status: :unprocessable_entity 
     end
   end
 
