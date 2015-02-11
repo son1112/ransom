@@ -15,6 +15,12 @@ class PostsController < ApplicationController
   def edit
   end
 
+  # def create
+  #   @post = Post.find(params[:event_id])
+  #   @video = @post.videos.create(params[:video])
+  #   redirect_to post_path(@post)
+  # end
+
   def create
     @post = Post.new(post_params)
 
@@ -29,6 +35,7 @@ class PostsController < ApplicationController
     end
   end
 
+  
   def update
     respond_to do |format|
       if @post.update(post_params)
