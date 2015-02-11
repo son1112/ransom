@@ -21,12 +21,8 @@ gem 'metamagic'
 gem 'paperclip', '~> 4.2.1'
 gem 'paperclip-ffmpeg'
 gem 'aws-sdk', '~> 1.20.0'
-#gem 'carrierwave'
-gem 'streamio-ffmpeg'
-#gem 'fog'
-gem 'multi_json', '~> 1.2.0'
-gem 'puma'
-gem 'aws-sdk', '~> 1.20.0'
+gem 'cocaine', '0.3.2'
+
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
