@@ -18,7 +18,6 @@ gem 'mail_form'
 gem 'skrollr-rails'
 gem 'autoprefixer-rails'
 gem 'metamagic'
-<<<<<<< HEAD
 gem 'paperclip', '~> 4.2.1'
 gem 'paperclip-ffmpeg'
 gem 'aws-sdk', '~> 1.20.0'
@@ -27,10 +26,7 @@ gem 'streamio-ffmpeg'
 #gem 'fog'
 gem 'multi_json', '~> 1.2.0'
 gem 'puma'
-=======
-gem 'paperclip', '~> 4.2'
 gem 'aws-sdk', '~> 1.20.0'
->>>>>>> 9738943a4b69cb54ab3af5e391a511aa30d89519
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development

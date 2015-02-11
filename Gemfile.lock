@@ -30,24 +30,18 @@ GEM
     arel (5.0.1.20140414130214)
     autoprefixer-rails (5.1.5)
       execjs
-<<<<<<< HEAD
       json
-=======
->>>>>>> 9738943a4b69cb54ab3af5e391a511aa30d89519
     aws-sdk (1.20.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4, < 1.6.0)
       uuidtools (~> 2.1)
-<<<<<<< HEAD
     bcrypt (3.1.10)
-    bootstrap-sass (3.3.3)
-      autoprefixer-rails (>= 5.0.0.1)
-      sass (>= 3.2.19)
-=======
     bcrypt (3.1.9)
     bootstrap-sass (3.3.1.0)
       sass (~> 3.2)
->>>>>>> 9738943a4b69cb54ab3af5e391a511aa30d89519
+    bootstrap-sass (3.3.3)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.2.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -87,21 +81,17 @@ GEM
     metamagic (3.1.6)
       rails (>= 3.0.0)
     mime-types (1.25.1)
-<<<<<<< HEAD
+    minitest (5.5.0)
     minitest (5.5.1)
+    multi_json (1.10.1)
     multi_json (1.2.0)
     nokogiri (1.5.11)
-    paperclip (4.2.1)
-=======
-    minitest (5.5.0)
-    multi_json (1.10.1)
-    nokogiri (1.5.11)
     paperclip (4.2.0)
->>>>>>> 9738943a4b69cb54ab3af5e391a511aa30d89519
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    paperclip (4.2.1)
     paperclip-ffmpeg (1.2.0)
       paperclip (>= 2.5.2)
       rails
