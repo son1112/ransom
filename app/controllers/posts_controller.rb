@@ -15,17 +15,11 @@ class PostsController < ApplicationController
   def edit
   end
 
-  # def create
-  #   @post = Post.find(params[:event_id])
-  #   @video = @post.videos.create(params[:video])
-  #   redirect_to post_path(@post)
-  # end
-
   def create
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to @post, notice: 'Post was successfully created.'
+      #redirect_to @post, notice: 'Post was successfully created.'
       render :show, status: :created, location: @post 
     else
       render :new 
