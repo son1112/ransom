@@ -3,3 +3,23 @@
   <p>Upload your video to YouTube and share it with the world!</p>
   <p><%= link_to 'Upload video now!', new_video_path, class: 'btn btn-primary btn-lg' %></p>
 </div>
+
+<div class="page-header">
+  <h1>Videos</h1>
+</div>
+
+<ul class="row" id="videos-list">
+  <% @videos.each do |video| %>
+    <li class="col-sm-3">
+      <div class="thumbnail">
+        <%= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+                              class: 'img-rounded'),
+				"https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' %>
+	<div class="caption">
+          <h4><%= video.title %></h4>
+          <p><%= truncate video.description, length: 100 %></p>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>
