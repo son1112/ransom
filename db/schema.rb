@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150219200418) do
+ActiveRecord::Schema.define(version: 20150219202408) do
 
   create_table "logs", force: true do |t|
     t.string   "issue"
@@ -40,16 +40,6 @@ ActiveRecord::Schema.define(version: 20150219200418) do
     t.string   "name"
     t.string   "token"
     t.string   "uid"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "videos", force: true do |t|
-    t.string   "name"
-    t.string   "encoding_file_name"
-    t.string   "encoding_content_type"
-    t.integer  "encoding_file_size"
-    t.datetime "encoding_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
