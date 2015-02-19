@@ -1,0 +1,24 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+    font-size: 8vw;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    @extend .center;
+}
+
+.title {
+
+}
+
+.video {
+    width: 100%;
+    height: 500px;
+    margin: auto;
+}

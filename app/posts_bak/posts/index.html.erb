@@ -1,0 +1,23 @@
+
+<ul>
+  <li>
+    <% @posts.reverse.each do |post| %>
+      <ul>
+
+	<li><%= video_tag(post.video.url, class: 'video', controls: true, preload: "auto") %></li>
+
+        <li class='title'><%= post.title %></li>
+        <li class='author'><%= post.author %></li>
+        <li class='desc'><%= post.description %></li>
+	<ul>
+          <li><%= link_to 'Show', post %></li>
+          <li><%= link_to 'Edit', edit_post_path(post) %></li>
+          <li><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+	</ul>
+      </ul>
+    <% end %>
+  </li>
+</ul>
+<br>
+
+<%= link_to 'New Post', new_post_path %>

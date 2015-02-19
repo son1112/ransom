@@ -18,3 +18,5 @@
 Procfile
 /config/initializers/secret_token.rb
 /config/local_env.yml
+
+/public/system/dragonfly

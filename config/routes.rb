@@ -1,8 +1,17 @@
 Ransom::Application.routes.draw do
+
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/auth/failure', to: 'sessions#fail'
   
+  resources :videos, only: [:new, :index]
+
+  resources :photos, only: [:new, :create, :index]
+  
+  resources :logs
+
   resources :posts
 
-  root 'posts#index'
+  root 'videos#index'
 
   get 'static_pages/home'
 

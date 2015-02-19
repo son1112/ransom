@@ -1,0 +1,34 @@
+require 'dragonfly'
+
+# Configure
+Dragonfly.app.configure do
+  plugin :imagemagick
+
+  secret "84eccbf012f60fd7c4e42409a7faa9aeebfd375139b9b9592c19eca3b31edc7b"
+
+  url_format "/media/:job/:name"
+
+  if Rails.env.development? || Rails.env.test?
+    datastore :file,
+              root_path: Rails.root.join('public/system/dragonfly', Rails.env),
+              server_root: Rails.root.join('public')
+  else
+    datastore :s3,
+              bucket_name: ENV['AWS_BUCKET'],
+              access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+              secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+              url_scheme: 'https'
+  end
+end
+
+# Logger
+Dragonfly.logger = Rails.logger
+
+# Mount as middleware
+Rails.application.middleware.use Dragonfly::Middleware
+
+# Add model functionality
+if defined?(ActiveRecord::Base)
+  ActiveRecord::Base.extend Dragonfly::Model
+  ActiveRecord::Base.extend Dragonfly::Model::Validations
+end

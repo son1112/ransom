@@ -1,0 +1,20 @@
+#photos-list {
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  clear: both;
+  li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 250px;
+    margin-bottom: 10px;
+    text-align: center;
+    p {
+      margin: 0;
+      margin-top: 10px;
+      height: 40px;
+      overflow: hidden;
+    }
+  }
+}

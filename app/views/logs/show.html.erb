@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Issue:</strong>
+  <%= @log.issue %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @log.description %>
+</p>
+
+<p>
+  <strong>Tried:</strong>
+  <%= @log.tried %>
+</p>
+
+<p>
+  <strong>Theories:</strong>
+  <%= @log.theories %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @log.author %>
+</p>
+
+<%= link_to 'Edit', edit_log_path(@log) %> |
+<%= link_to 'Back', logs_path %>
