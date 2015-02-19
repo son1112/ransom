@@ -1,13 +1,14 @@
 #videos-list {
-  margin: 0;
-  padding: 0;
-  li {
+    width: 90%;
+    margin: 0;
     padding: 0;
-    list-style-type: none;
-    word-wrap: break-word;
-    .caption {
-      text-align: center;
+    li {
+	padding: 0;
+	list-style-type: none;
+	word-wrap: break-word;
+	.caption {
+	    text-align: center;
+	}
     }
-  }
 }
 

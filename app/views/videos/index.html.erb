@@ -25,10 +25,8 @@
 </ul>
 
 <script>
- console.log($('.vid').width()*0.9);
  
  $('.vid').width(0.9*$('#videos-list li').width());
-
 
  $(window).on('resize', function() {
    $('.vid').width(0.9*$('#videos-list li').width());
