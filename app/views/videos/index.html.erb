@@ -4,14 +4,14 @@
 </div>
 
 <div class="page-header">
-  <h1>Videos</h1>
 </div>
 
 <ul class="row" id="videos-list">
   <% @videos.each do |video| %>
     <li class="col-sm-3">
       <div class="thumbnail">
-        <%= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+	<%= video_tag("https://www.youtube.com/watch?v=#{video.uid}", controls: true) %> 
+        <%#= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
                               class: 'img-rounded'),
 				"https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' %>
 	<div class="caption">
