@@ -10,7 +10,7 @@
   <% @videos.each do |video| %>
     <li class="col-sm-3">
       <div class="thumbnail">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.uid %>" frameborder="0" allowfullscreen></iframe>
+	<iframe class='vid' width="560" height="315" src="https://www.youtube.com/embed/<%= video.uid %>" frameborder="0" allowfullscreen></iframe>
 	<%#= video_tag("https://www.youtube.com/watch?v=#{video.uid}", controls: true) %> 
         <%#= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
                               class: 'img-rounded'),
@@ -23,3 +23,7 @@
     </li>
   <% end %>
 </ul>
+
+<script>
+  $('.vid').width($('#videos-list').width());
+</script>
