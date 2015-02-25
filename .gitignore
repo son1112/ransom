@@ -14,7 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-.env
+.env*
 Procfile
 /config/initializers/secret_token.rb
 /config/local_env.yml
