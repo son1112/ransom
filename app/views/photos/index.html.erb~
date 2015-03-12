@@ -1,0 +1,3 @@
+<h1>List of photos</h1>
+ 
+<%= link_to 'Add your photo', new_photo_path, class: 'btn btn-lg btn-primary' %>

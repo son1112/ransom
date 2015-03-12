@@ -1,0 +1,4 @@
+class RemoveExtraVideoAttachmentFromPost < ActiveRecord::Migration
+  def change
+  end
+end
